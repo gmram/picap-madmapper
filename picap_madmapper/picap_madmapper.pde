@@ -52,7 +52,7 @@ void oscEvent(OscMessage oscMessage) {
     }
 }
 
-void sendMMMessage(boolean begin, int electrode) {
+void sendMMMessage(boolean restart, int electrode) {
   OscMessage msg = new OscMessage("/medias/" + mediasList[electrode] + "/restart");
   msg.add(restart);
   
