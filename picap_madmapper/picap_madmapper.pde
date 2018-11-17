@@ -53,8 +53,8 @@ void oscEvent(OscMessage oscMessage) {
 }
 
 void sendMMMessage(boolean begin, int electrode) {
-  OscMessage msg = new OscMessage("/medias/" + mediasList[electrode] + "/begin");
-  msg.add(begin);
+  OscMessage msg = new OscMessage("/medias/" + mediasList[electrode] + "/restart");
+  msg.add(restart);
   
   // send it to MadMapper
   oscP5.send(msg, madMapper);
